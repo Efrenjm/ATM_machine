@@ -1,0 +1,28 @@
+
+/* .carousel-item{
+    background-image: url(https://picsum.photos/seed/picsum/1200/900);
+    background-repeat: no-repeat;
+} */
+.logoDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+}
+.logoSVG{
+    height: 32px;
+}
+.logoName{
+    margin-top: 10px;
+    font-size: 32px;
+}
+.carousel-inner{
+    margin: 0 0 80px 0;
+}
+.carousel-item{
+    height: 500px;
+}
+#buzon, #perfil{
+    display: none;
+}
