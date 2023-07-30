@@ -1,0 +1,59 @@
+main {
+  padding-top: 50px;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+.bankingCard {
+  border-radius: 20px;
+  height: 300px;
+  width: 500px;
+  color: white;
+  background-color: black;
+  padding: 30px 50px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.bankingCard div {
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: flex-end;
+  height: max-content;
+}
+.bankingCard div div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  align-content: flex-end;
+}
+.bankingCard * {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  cursor: default;
+}
+
+footer {
+  justify-self: center;
+}
+
+.cvv {
+  background-color: rgb(189, 189, 189);
+  height: 45px;
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+}
+
+.cvv:hover {
+  background-color: rgb(211, 209, 209);
+}
+
+/*# sourceMappingURL=main.css.map */

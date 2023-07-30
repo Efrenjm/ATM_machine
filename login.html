@@ -16,11 +16,11 @@
                 <h1 class="h3 mb-3 fw-normal">Inicie sesión</h1>
 
                 <div class="form-floating">
-                <input type="email" class="form-control" id="floatingInput" placeholder="mali@correo.com">
+                <input type="email" class="form-control" id="floatingInput" placeholder="mali@correo.com" required>
                 <label for="floatingInput">Correo electrónico</label>
                 </div>
                 <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
                 <label for="floatingPassword">Contraseña</label>
                 </div>
 
@@ -31,6 +31,7 @@
                 </label>
                 </div>
                 <button class="btn btn-primary w-100 py-2" type="submit" id="login">Entrar</button>
+                <p id="validation"></p>
             </form>
         </main>
 
