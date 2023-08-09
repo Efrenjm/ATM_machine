@@ -16,7 +16,7 @@ window.onload = function () {
 
     submit.addEventListener('click',()=>{
         for (usuario of cuentas){
-            if(correo.value == usuario.correo){
+            if(correo.value.toLowerCase() == usuario.correo){
                 if(pass.value == usuario.contraseña){
                     console.log(pass.value)
                     console.log("La contraseña y el usuario coinciden")
