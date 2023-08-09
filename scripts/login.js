@@ -10,6 +10,7 @@ window.onload = function () {
     let pass = document.getElementById('floatingPassword');
     let form = document.getElementById('login-form');
     let validationText = document.getElementById('validation');
+    let redirect = false;
     form.addEventListener('submit',(event)=>{
         event.preventDefault();
     })
@@ -25,9 +26,9 @@ window.onload = function () {
                     sessionStorage.setItem('saldoDebito',usuario.saldo.debito);
                     sessionStorage.setItem('saldoCredito',usuario.saldo.credito);
                     sessionStorage.setItem('saldoRecompensas',usuario.saldo.recompensas);
+                    redirect = true;
                     window.location.replace('main.html');
-                }
-                else{
+                }else{
                     validationText.style.display = 'block';
                     break;
                 }
@@ -35,7 +36,7 @@ window.onload = function () {
             }
             
         }
-        validationText.style.display = 'block';
+        if(!redirect)   validationText.style.display = 'block';
     });
 };
 
