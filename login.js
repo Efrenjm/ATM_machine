@@ -8,37 +8,15 @@ window.onload = function () {
     let submit = document.getElementById('login');
     let correo = document.getElementById('floatingInput');
     let pass = document.getElementById('floatingPassword');
-    let form = document.getElementById('login-form')
-    //let textOfValidation = document.getElementById('validation');
-    // form.onsubmit = ()=>{
-    //     for (usuario of cuentas){
-    //         console.log(correo.innerHTML)
-    //         setTimeout(300000)
-    //         if(correo.value == usuario.correo){
-    //             if(pass.value == usuario.contraseña){
-    //                 console.log(pass.value)
-    //                 sessionStorage.setItem('nombre',cuentas.nombre.nombre);
-    //                 sessionStorage.setItem('apellido',cuentas.nombre.apellido);
-    //                 sessionStorage.setItem('saldoDebito',cuentas.saldo.debito);
-    //                 sessionStorage.setItem('saldoCredito',cuentas.saldo.credito);
-    //                 sessionStorage.setItem('saldoRecompensas',cuentas.saldo.recompensas);
-    //                 setTimeout(5000)
-    //                 window.location.href('main.html');
-    //             }
-    //             alert('Usuario y/o contraseña no válidos');
-    //             break;
-    //         }
-    //     }
-    // }
+    let form = document.getElementById('login-form');
+    let validationText = document.getElementById('validation');
     form.addEventListener('submit',(event)=>{
         event.preventDefault();
     })
 
     submit.addEventListener('click',()=>{
         for (usuario of cuentas){
-            console.log(correo.value)
             if(correo.value == usuario.correo){
-                console.log(usuario.correo)
                 if(pass.value == usuario.contraseña){
                     console.log(pass.value)
                     console.log("La contraseña y el usuario coinciden")
@@ -47,15 +25,17 @@ window.onload = function () {
                     sessionStorage.setItem('saldoDebito',usuario.saldo.debito);
                     sessionStorage.setItem('saldoCredito',usuario.saldo.credito);
                     sessionStorage.setItem('saldoRecompensas',usuario.saldo.recompensas);
-
                     window.location.replace('main.html');
                 }
-                //alert('Usuario y/o contraseña no válidos');
-                //window.location.replace('main.html');
-                break;
+                else{
+                    validationText.style.display = 'block';
+                    break;
+                }
+                
             }
             
         }
+        validationText.style.display = 'block';
     });
 };
 
